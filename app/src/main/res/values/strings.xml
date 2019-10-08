@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">papgoApiTest</string>
+    <string name="title_activity_view">ViewActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="coin_BTC">비트코인</string>
+    <string name="coin_ETH">이더리움</string>
+    <string name="coin_XRP">리플</string>
+    <string name="coin_BCH">비트코인캐시</string>
+    <string name="coin_LTC">라이트코인</string>
+</resources>

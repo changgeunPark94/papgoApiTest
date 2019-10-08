@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_coinBTC"
+        android:icon="@drawable/ic_money_black_24dp"
+        android:title="시세조회" />
+
+    <item
+        android:id="@+id/navigation_coinETH"
+        android:icon="@drawable/ic_feedback_black_24dp"
+        android:title="투자추천" />
+
+    <item
+        android:id="@+id/navigation_coinXRP"
+        android:icon="@drawable/ic_notifications_active_black_24dp"
+        android:title="공지사항" />
+    <!--<item
+        android:id="@+id/navigation_coinBCH"
+        android:icon="@drawable/ic_money_black_24dp"
+        android:title="@string/coin_BCH" />
+    <item
+        android:id="@+id/navigation_coinLTC"
+        android:icon="@drawable/ic_money_black_24dp"
+        android:title="@string/coin_LTC" />-->
+
+</menu>
