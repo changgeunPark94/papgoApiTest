@@ -2,38 +2,28 @@ package com.example.papgoapitest.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.papgoapitest.CoinDataSet
 import com.example.papgoapitest.R
+import kotlinx.android.synthetic.main.item_cardview.view.*
 
-class FragmentAdapter(private val list:List<CoinDataSet>): RecyclerView.Adapter<FragmentAdapter.CoinViewHolder>() {
-    override fun getItemCount(): Int  = list.size
+// Adapter = > Recyclerview의 항목을 구성한다.
+class FragmentAdapter(private val mDataset: Array<String>): RecyclerView.Adapter<FragmentAdapter.CoinViewHolder>() {
+    override fun getItemCount(): Int  = mDataset.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FragmentAdapter.CoinViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        return CoinViewHolder(inflater, parent)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview, parent,false)
+        return CoinViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: FragmentAdapter.CoinViewHolder, position: Int) {
-        val coinDataSet:CoinDataSet
+    override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
+        holder.mTextviewCoinCondition.text = mDataset[position]
     }
-    inner class CoinViewHolder(inflater: LayoutInflater, parent: ViewGroup)
-        :RecyclerView.ViewHolder(inflater.inflate(R.layout.item_cardview, parent, false)){
-        private var mImageView_Coin:ImageView? = null
-        private var mCoinhighlow_Coin:ImageView? = null
-        private var mTextviewCoinName:TextView? = null
-        private var mTextviewCoinCondition:TextView? = null
-        init {
-            mTextviewCoinCondition = itemView.findViewById(R.id.textview_coin_conditions)
-            mImageView_Coin = itemView.findViewById(R.id.textview_coinName)
-            mCoinhighlow_Coin = itemView.findViewById(R.id.image_coin_highlow)
-            mTextviewCoinName = itemView.findViewById(R.id.image_coin)
-        }
-        /*여기에 이제 그 .... 어떻게 바꿀껀지 메소드 들어가야할듯*/
-        /*어떤 메소드가 들어가야하냐면 ~~
-        * 코인텍스트. 컨디션. 이름. 등락 바꿔주는 메소드 ㅎ_ㅎ */
+    //viewHolder = > 각 항모ㅓㄱ의 구성 뷰의 재활용 목적으로 사용함
+    inner class CoinViewHolder(itemView: View)
+        :RecyclerView.ViewHolder(itemView){
+        var mTextviewCoinCondition:TextView = itemView.textview_coin_conditions
     }
 }
