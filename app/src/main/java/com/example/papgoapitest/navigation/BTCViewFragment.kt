@@ -29,14 +29,14 @@ class BTCViewFragment() : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view = LayoutInflater.from(activity).inflate(R.layout.fragment_btc,container,false)
 
-        val rv = view.findViewById(R.id.main_recycleView) as RecyclerView
+        /*val rv = view.findViewById(R.id.main_recycleView) as RecyclerView
         rv.setHasFixedSize(true)
 
         val llm = LinearLayoutManager(activity)
         rv.layoutManager = llm
 
         var adapter = FragmentAdapter(arrayOf("Example One", "Example Two", "Example Three", "Example Four", "Example Five", "Example Six", "Example Seven"))
-        rv.adapter = adapter
+        rv.adapter = adapter*/
 
         return view
     }
